@@ -1,11 +1,11 @@
 {
   "name": "create-new-startup",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Starter code for quickly building startups with Pivot.js",
   "main": "./frontend/index.js",
   "bin": {
-	"create-new-startup": "bin/index.js"
-	},
+    "create-new-startup": "bin/index.js"
+  },
   "scripts": {
     "start-frontend": "webpack-dev-server .",
     "start-backend": "nodemon ./backend/server.js",

@@ -49,6 +49,6 @@
     "react-dom": "^18.1.0"
   },
   "dependencies": {
-    
+    "yargs": "^17.7.2"
   }
 }

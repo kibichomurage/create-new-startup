@@ -5,7 +5,8 @@ const args = process.argv.slice(2);
 if(args.length < 2)
 {
 	console.log("Failed: Please enter a name for your project\n");
-	console.log("Usage: npx create-new-startup AmazingStartupName")
+	console.log("Usage: npx create-new-startup AmazingStartupName");
+	process.exit(-1);
 }
 
 const run = command =>

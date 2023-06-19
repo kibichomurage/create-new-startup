@@ -4,7 +4,7 @@
   "description": "Starter code for quickly building startups with Pivot.js",
   "main": "./frontend/index.js",
   "bin": {
-    "create-new-startup": "bin/index.js"
+    "create-new-startup": "bin/installScript.js"
   },
   "scripts": {
     "start-frontend": "webpack-dev-server .",

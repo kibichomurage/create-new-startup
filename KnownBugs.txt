@@ -1,0 +1,32 @@
+<Route path="*" element={<NotFoundPage/>}/> works but <Route path="*" element={<NotFound/>}/> page appears blank because NotFound Element DNE in App.js
+
+//How to make REact router dom work
+https://ui.dev/react-router-cannot-get-url-refresh = changing webpackl config
+
+//Maybe add to ensure form is completed or Detect warning if form is uncompleted
+https://dev.to/bangash1996/detecting-user-leaving-page-with-react-router-dom-v602-33ni
+
+//Add a code snippet like rafce but has analytics
+
+//This is how you market VS code snips
+https://github.com/antfu/vscode-settings/issues/11
+
+//marketing
+You have a math phd now you make silly powerpoints for goldman. 
+Take our Math majors X Web Design with Pivot.js
+//Applied group theory, Analysis and Diffy Qs to make the most advanced animations
+
+//Maybe code upload to make everything webpack,mozilla,safari compatible, or phone tests
+//Maybe add touch events
+
+Maybe PivotJS - The newsletter
+Why uploadting is ngmi
+
+//Mdx security
+https://mdxjs.com/docs/getting-started/#security
+
+https://stackoverflow.com/a/59544763
+Used wrong brackets for redux 
+
+//Enable proxy to allow, then unsafe port error if you use 6000 use firefox and chrome for debugging
+https://chromium.googlesource.com/chromium/src.git/+/refs/heads/master/net/base/port_util.cc

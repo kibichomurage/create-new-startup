@@ -24,7 +24,7 @@ const run = command =>
 };
 
 const startupName = process.argv[2];
-const checkout = `git clone https://github.com/kibichomurage/create-new-startup`;
+const checkout = `git clone https://github.com/kibichomurage/create-new-startup ${startupName}`;
 const prepareInstall = `cd ${startupName} && git init && npm install`;
 
 const clonedRepo = run(checkout);

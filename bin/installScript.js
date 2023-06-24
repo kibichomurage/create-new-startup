@@ -26,13 +26,13 @@ const run = command =>
 
 const startupName = process.argv[2];
 const checkout = `git clone https://github.com/kibichomurage/create-new-startup ${startupName}`;
-const prepareInstall = `cd ${startupName} && npm install`;
+const prepareInstall = `cd ${startupName} && npm install `;
 
-const deleteGitLinux = 'rm -fr .git';
-const deleteBinLinux = 'rm -fr bin';
+const deleteGitLinux = `cd ${startupName} && rm -fr .git`;
+const deleteBinLinux = `cd ${startupName} && rm -fr bin`;
 
-const deleteGitWindows = 'rmdir /s /q .git';
-const deleteBinWindows = 'rmdir /s /q bin';
+const deleteGitWindows = `cd ${startupName} && rmdir /s /q .git`;
+const deleteBinWindows = `cd ${startupName} && rmdir /s /q bin`;
 
 const newRepoCommand = 'git init'
 

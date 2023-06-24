@@ -1,0 +1,146 @@
+{
+    "Redux Slice": {
+      "prefix": ["rtkSlice"],
+      "body": 
+      [
+        "import { createSlice} from '@reduxjs/toolkit';",
+        " ",
+        "const ${TM_FILENAME_BASE}InitialState = ",
+        "{",
+        "\t ",
+        "\t ",
+        "}",
+        " ",
+        "export const ${TM_FILENAME_BASE}Slice =  createSlice({",
+        "\tname: '${TM_FILENAME_BASE}',",
+        "\tinitialState: ${TM_FILENAME_BASE}InitialState,",
+        "\treducers :",
+        "\t{",
+        " ",
+        "\t}",
+        "});",
+        " ",
+        "export const { } = ${TM_FILENAME_BASE}Slice.actions;"
+    ],
+      "description": "Create a new UI slice for redux toolkit"
+    },
+
+    "Redux Boolean": {
+        "prefix": "rtkbool",
+        "body": 
+        [
+            "//Copy and Paste inside Initial state",
+            "${1} : false,",
+            " ",
+            "//Copy and Paste inside Reducer",
+            "toggle${1}State : (state) =>",
+            "{",
+            "\tif(state.${1} === true){state.${1} = false}",
+            "\telse{state.${1} = true}",
+            "}",
+            "//Copy and Paste export",
+            "export const select${1}State  = (state) => state.${TM_FILENAME_BASE}.${1};"
+          
+        ],
+        "description": "Redux Boolean"
+      },
+
+      "Redux List": {
+        "prefix": "rtklist",
+        "body": 
+        [
+            "//${1:listVar} Initial state",
+            "${1:listVar} : [],",
+            " ",
+            "//Add to ${1:listVar} Reducer",
+            "addTo${1:listVar}State : (state, action) =>",
+            "{",
+            "\tstate.${1:listVar}.push(action.payload)",            
+            "},",
+			" ",
+			"//Remove from ${1:listVar} Reducer",
+            "removeFrom${1:listVar}State : (state, action) =>",
+            "{",
+            "\tstate.${1:listVar} = state.${1:listVar}.filter((item) => item !== action.payload);",
+            "}",
+			" ",
+            "//Export ${1:listVar} current state",
+            "export const select${1:listVar}State  = (state) => state.${TM_FILENAME_BASE}.${1:listVar};",
+			" ",
+			"//Export ${1:listVar} actions",
+			"addTo${1:listVar}State , removeFrom${1:listVar}State "
+
+        ],
+        "description": "Redux List"
+      },
+      "Redux Variable": {
+        "prefix": "rtkvar",
+        "body": 
+        [
+            "//${1:var} Initial state",
+            "${1:var} : ' ',",
+            " ",
+            "//${1:var} Reducer",
+            "update${1:var}State : (state, action) =>",
+            "{",
+            "\tstate.${1:var} = action.payload",            
+            "}",
+            "//${1:var} export",
+            "export const select${1:var}State  = (state) => state.${TM_FILENAME_BASE}.${1:var};"
+        ],
+        "description": "Redux List"
+      },
+      "ReduxToolkit with analytics":{
+        "prefix" : "rtkAl",
+        "body": [
+          "import React from 'react';",
+          "import styled from 'styled-components';",
+          "import { useLocation } from 'react-router-dom';",
+          "import {useSelector, useDispatch } from 'react-redux';",
+          "//import {addTopageVisitsState} from /*Path to analyticsReducer.js i.e*/ '../Analytics/AnalyticsReducer';",
+          "\n\n\nconst Container = styled.div`",
+          "height: 100vh;",
+          "width: 100vw;",
+          "display:block;",
+          "`;",
+          " ",
+          "const ${1:${TM_FILENAME_BASE}} = () => {",
+          "\tconst dispatch = useDispatch()",
+          "\tconst location = useLocation();",
+          "\tconst currentTime = Date.now();",
+          "\tconst pageDetails = {'path':location.pathname, 'time': currentTime};",
+          "\t//dispatch(addTopageVisitsState(pageDetails));",
+          "\nreturn(",
+          "\t<Container>New Pivot</Container>",
+          ")",
+          "}\n\n\n",
+          "export default ${1:${TM_FILENAME_BASE}}"
+
+
+        ],
+        "description": "Create jsx file with redux toolkit, styled-components and analytics"
+      },
+
+      "RTKQuery with Fetch": {
+        "prefix": "rtkApi",
+        "body": [
+          "import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';",
+          "const baseUrl = 'http://localhost:6000;' //Node Server",
+          "",
+          "export const apiReducer = createApi({",
+          "  reducerPath : 'apiReducer',",
+          "  baseQuery : fetchBaseQuery({baseUrl: baseUrl}),",
+          "  credentials : 'same-origin',",
+          "  endpoints : (builder) =>",
+          "  ({",
+          "      getIPAddress : builder.query({query: () => {url: 'https://geolocation-db.com/json/'}})",
+          "  })",
+          "});",
+          "export const {useGetIPAddressQuery} = apiReducer;",
+          "  ",
+          ""
+        ],
+        "description": "RTKQuery with Fetch"
+}
+
+}

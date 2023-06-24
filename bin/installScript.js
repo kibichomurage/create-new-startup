@@ -34,7 +34,7 @@ const deleteBinLinux = `cd ${startupName} && rm -fr bin`;
 const deleteGitWindows = `cd ${startupName} && rmdir /s /q .git`;
 const deleteBinWindows = `cd ${startupName} && rmdir /s /q bin`;
 
-const newRepoCommand = 'git init'
+const newRepoCommand = `cd ${startupName} && git init`;
 
 const clonedRepo = run(checkout);
 console.log("Cloning starter code from Murage Kibicho's GitHub");

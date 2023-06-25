@@ -30,9 +30,11 @@ const prepareInstall = `cd ${startupName} && npm install `;
 
 const deleteGitLinux = `cd ${startupName} && rm -fr .git`;
 const deleteBinLinux = `cd ${startupName} && rm -fr bin`;
+const deleteKnownBugsLinux = `cd ${startupName} && rm KnownBugs.txt`;
 
 const deleteGitWindows = `cd ${startupName} && rmdir /s /q .git`;
 const deleteBinWindows = `cd ${startupName} && rmdir /s /q bin`;
+const deleteKnownBugsWindows = `cd ${startupName} && del KnownBugs.txt`;
 
 const newRepoCommand = `cd ${startupName} && git init`;
 
@@ -64,6 +66,9 @@ if(os.type() === 'Linux')
 	const newRepo = run(newRepoCommand);
 	if(!newRepo){console.log("Git init failed"); process.exit(-1);}
 	
+	const deleteBugsFile = run(deleteKnownBugsLinux);
+	if(!newRepo){console.log("Delete Known failed"); process.exit(-1);}
+	
 }
 else if(os.type() === 'Windows_NT')
 {
@@ -75,6 +80,9 @@ else if(os.type() === 'Windows_NT')
 	
 	const newRepo = run(newRepoCommand);
 	if(!newRepo){console.log("Git init failed"); process.exit(-1);}
+	
+	const deleteBugsFile = run(deleteKnownBugsWindows);
+	if(!newRepo){console.log("Delete Known failed"); process.exit(-1);}
 
 }
 console.log(`Success!\ncd ${startupName} && npm start\n`);

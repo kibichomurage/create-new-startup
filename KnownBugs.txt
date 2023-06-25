@@ -36,3 +36,4 @@ TODO
 1. Start rtkPost with post like rtkget
 2. Fix webpack.config sp react-router-dom-works
 3. Figure oout how to generate files
+4. Add svg support and tailwind

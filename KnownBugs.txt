@@ -39,3 +39,8 @@ TODO
 4. Add svg support and tailwind
 5. Can't get material ui icons working - added font awesome instead, maybe offer subs to unicons
 6. Add style margin 0 to index.html, maybe look at react index.html
+7. Add markdown support in webpack config needs file-loader, not raw-loader
+{
+        test: /\.md$/,
+        use: 'file-loader'
+      },

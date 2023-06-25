@@ -14,6 +14,7 @@ https://github.com/antfu/vscode-settings/issues/11
 //marketing
 You have a math phd now you make silly powerpoints for goldman. 
 Take our Math majors X Web Design with Pivot.js
+https://twitter.com/theaymanarab/status/1597325436794851328
 //Applied group theory, Analysis and Diffy Qs to make the most advanced animations
 
 //Maybe code upload to make everything webpack,mozilla,safari compatible, or phone tests
@@ -30,3 +31,5 @@ Used wrong brackets for redux
 
 //Enable proxy to allow, then unsafe port error if you use 6000 use firefox and chrome for debugging
 https://chromium.googlesource.com/chromium/src.git/+/refs/heads/master/net/base/port_util.cc
+
+//

@@ -39,6 +39,7 @@
     "@babel/core": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
     "@babel/preset-react": "^7.16.7",
+    "@reduxjs/toolkit": "^1.9.5",
     "babel-loader": "^8.2.5",
     "html-webpack-plugin": "^5.5.0",
     "styled-components": "^6.0.0-rc.3",
@@ -51,6 +52,9 @@
     "nodemon": "^2.0.22",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-router-dom": "^6.11.2",
+    "redux": "^4.2.1",
+    "react-redux": "^8.0.7",
     "mongoose": "^7.3.1",
     "morgan": "^1.10.0",
     "bcrypt": "^5.1.0",
@@ -59,7 +63,7 @@
     "helmet": "^7.0.0",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.3.1",
-    "morgan": "^1.10.0",
+    "morgan": "^1.10.0"
   },
   "dependencies": {}
 }

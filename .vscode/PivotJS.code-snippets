@@ -97,7 +97,6 @@
           "import styled from 'styled-components';",
           "import { useLocation } from 'react-router-dom';",
           "import {useSelector, useDispatch } from 'react-redux';",
-          "//import {addTopageVisitsState} from /*Path to analyticsReducer.js i.e*/ '../Analytics/AnalyticsReducer';",
           "\n\n\nconst Container = styled.div`",
           "height: 100vh;",
           "width: 100vw;",
@@ -109,7 +108,6 @@
           "\tconst location = useLocation();",
           "\tconst currentTime = Date.now();",
           "\tconst pageDetails = {'path':location.pathname, 'time': currentTime};",
-          "\t//dispatch(addTopageVisitsState(pageDetails));",
           "\nreturn(",
           "\t<Container>New Pivot</Container>",
           ")",
@@ -121,26 +119,82 @@
         "description": "Create jsx file with redux toolkit, styled-components and analytics"
       },
 
-      "RTKQuery with Fetch": {
-        "prefix": "rtkApi",
+      "RTKQuery Api Slice": {
+        "prefix": "rtkAPI",
         "body": [
           "import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';",
-          "const baseUrl = 'http://localhost:6000;' //Node Server",
           "",
-          "export const apiReducer = createApi({",
-          "  reducerPath : 'apiReducer',",
-          "  baseQuery : fetchBaseQuery({baseUrl: baseUrl}),",
-          "  credentials : 'same-origin',",
-          "  endpoints : (builder) =>",
-          "  ({",
-          "      getIPAddress : builder.query({query: () => {url: 'https://geolocation-db.com/json/'}})",
-          "  })",
-          "});",
-          "export const {useGetIPAddressQuery} = apiReducer;",
-          "  ",
-          ""
+          "const baseUrl = 'http://localhost:6253'; //Node Server",
+          "",
+          "const baseQuery = fetchBaseQuery({",
+          "  baseUrl: baseUrl,",
+          "  credentials:'same-origin', //Change to credentials:'include'",
+          "  prepareHeaders: (headers, { getState }) => ",
+          "  {",
+          "    /*Add Headers*/",
+          "    return headers",
+          "  }",
+          "})",
+          "",
+          "export const ${1:${TM_FILENAME_BASE}} = createApi({",
+          "  reducerPath : '${1:${TM_FILENAME_BASE}}',",
+          "  baseQuery: baseQuery,",
+          "  endpoints: builder => ({})",
+          "})"
         ],
-        "description": "RTKQuery with Fetch"
-}
+        "description": "RTKQuery Api Slice"
+      },
+
+      "RTKQuery Api Inject Endpoints": {
+        "prefix": "rtkInject",
+        "body": [
+          "//import { ReduxApi } from '../../../Redux/ReduxApi' ",
+          "",
+          "export const ${1:${TM_FILENAME_BASE}} = ReduxApi.injectEndpoints({",
+          "    endpoints: builder => ",
+          "    ({",
+          "        ",
+          "    })",
+          "})",
+          "export const { } = ${1:${TM_FILENAME_BASE}}"
+        ],
+        "description": "RTKQuery Api Inject Endpoints"
+      },
+
+      "RTKQuery Post": {
+        "prefix": "rtkPost",
+        "body": [
+          "//Press Tab to Save",
+          "//$post{1} POST request",
+          "${1}  : builder.mutation({",
+          "            query: (builder) => ({",
+          "                url: ' ',",
+          "                method: 'POST',",
+          "                body: builder",
+          "            })",
+          "        }),",
+          "",
+          "//add to export",
+          "//use${1/(.*)/${1:/capitalize}/}Mutation"
+        ],
+        "description": "RTKQuery Post"
+      },
+      
+      "RTKQuery Get": {
+        "prefix": "rtkGet",
+        "body": [
+          "//${1} GET request",
+          "get${1}  : builder.query({",
+          "            query: () => ({",
+          "                url: ' ',",
+          "                method: 'GET',",
+          "            })",
+          "        }),",
+          "",
+          "//add to export",
+          "//useGet${1/(.*)/${1:/capitalize}/}Query"
+        ],
+        "description": "RTKQuery Get"
+      }
 
 }

@@ -1,6 +1,6 @@
 {
     "Redux Slice": {
-      "prefix": ["rtkSlice"],
+      "prefix": ["pvtSlice"],
       "body": 
       [
         "import { createSlice} from '@reduxjs/toolkit';",
@@ -26,7 +26,7 @@
     },
 
     "Redux Boolean": {
-        "prefix": "rtkbool",
+        "prefix": "pvtBool",
         "body": 
         [
             "//Copy and Paste inside Initial state",
@@ -46,7 +46,7 @@
       },
 
       "Redux List": {
-        "prefix": "rtklist",
+        "prefix": "pvtList",
         "body": 
         [
             "//${1:listVar} Initial state",
@@ -74,7 +74,7 @@
         "description": "Redux List"
       },
       "Redux Variable": {
-        "prefix": "rtkvar",
+        "prefix": "pvtVar",
         "body": 
         [
             "//${1:var} Initial state",
@@ -91,7 +91,7 @@
         "description": "Redux List"
       },
       "ReduxToolkit with analytics":{
-        "prefix" : "rtkAl",
+        "prefix" : "pvtAl",
         "body": [
           "import React from 'react';",
           "import styled from 'styled-components';",
@@ -120,7 +120,7 @@
       },
 
       "RTKQuery Api Slice": {
-        "prefix": "rtkAPI",
+        "prefix": "pvtAPI",
         "body": [
           "import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';",
           "",
@@ -146,7 +146,7 @@
       },
 
       "RTKQuery Api Inject Endpoints": {
-        "prefix": "rtkInject",
+        "prefix": "pvtInject",
         "body": [
           "//import { ReduxApi } from '../../../Redux/ReduxApi' ",
           "",
@@ -162,7 +162,7 @@
       },
 
       "RTKQuery Post": {
-        "prefix": "rtkPost",
+        "prefix": "pvtPost",
         "body": [
           "//Press Tab to Save",
           "//$post{1} POST request",
@@ -181,7 +181,7 @@
       },
       
       "RTKQuery Get": {
-        "prefix": "rtkGet",
+        "prefix": "pvtGet",
         "body": [
           "//${1} GET request",
           "get${1}  : builder.query({",

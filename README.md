@@ -83,7 +83,7 @@ Every page shares a folder with its components, RTKQuery API calls and Redux sta
 <a name="rtkquery-cheatsheet"/>
 
 ## RTKQuery Cheatsheet
-5. **pvtApi** - Creates a functional component with imports for basic analytics
+1. **pvtApi** - Creates a functional component with imports for basic analytics
 
 	
    

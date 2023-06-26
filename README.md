@@ -102,6 +102,7 @@ Every page shares a folder with its components, RTKQuery API calls and Redux sta
 ## Author
 Murage Kibicho \
 Branford College \
-New Haven, Connecticut \ 
+New Haven, Connecticut 
+
 [Follow on Twitter](https://twitter.com/murage_kibicho) \
 [Join Reddit Community](https://www.reddit.com/r/PivotJS/)

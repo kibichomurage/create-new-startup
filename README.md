@@ -1,3 +1,6 @@
+[Follow on Twitter](https://twitter.com/murage_kibicho) \
+[Join Reddit Community](https://www.reddit.com/r/PivotJS/) 
+
 A React framework for startup founders to <ins>test ideas super fast</ins> while writing <ins>reusable code for their next pivot.</ins>  
 # Get Started Immediately
 ```
@@ -60,8 +63,8 @@ Every page shares a folder with its components, RTKQuery API calls and Redux sta
 	        - **ChosenName**Endpoints.js - RTKQuery API calls 
 	  
 * Redux Folder
-	- ReduxStore.js configures the Redux store
-	- ReduxApi is the **ONLY** place you write `createAPI`. Endpoints should be empty
+	- ReduxStore.js - configure Redux store.
+	- ReduxApi.js - **ONLY** place you write `createAPI`. Endpoints should be empty
 * App.js
 	- Main routes ie. "home...landing...store...etc" defined here
 * index.js
@@ -73,22 +76,23 @@ Every page shares a folder with its components, RTKQuery API calls and Redux sta
 <a name="rtk-cheatsheet"/>
 
 ## Redux Cheatsheet
-* Redux is a lot of boiler plate. This framework completes code for you.
-1. **pvtSlice** - Creates a Redux slice and and its exports
-2. **pvtBool** - Creates a Boolean initial state variable and true/false reducers
-3. **pvtList** - Creates a List initial state variable and add/remove reducers
-4. **pvtVar** - Creates a general initial state variable. Default is string but can be anything you want
-5. **pvtAl** - Creates a functional component with imports for basic analytics
+* Redux is mostly boiler plate. This framework offers code code completion in VScode.
+1. **pvtSlice** - Generates a Redux slice and and its exports
+2. **pvtBool** - Generates a Boolean initial state variable and true/false reducers
+3. **pvtList** - Generates a List initial state variable and add/remove reducers
+4. **pvtVar** - Generates a general initial state variable. Default is string but can be anything you want
+5. **pvtAl** - Generates a functional component with imports for basic analytics
 
 <a name="rtkquery-cheatsheet"/>
 
 ## RTKQuery Cheatsheet
-1. **pvtApi** - Creates a functional component with imports for basic analytics
+1. **pvtApi** - Generates an API slice and exports. Only need to run once in a project.
+2. **pvtInject** - Generates an Endpoint Injector for ReduxApi.js
+3. **pvtPost** - Generates a POST mutation and its exports.
+4. **pvtGet** - Generates a GET query and its exports.
 
 	
    
-
-
 
 ## Milestones
 1. Test on Windows and Mac
@@ -96,6 +100,8 @@ Every page shares a folder with its components, RTKQuery API calls and Redux sta
 
 
 ## Author
-Murage Kibicho
-Branford College
-New Haven, Connecticut
+Murage Kibicho \
+Branford College \
+New Haven, Connecticut \ 
+[Follow on Twitter](https://twitter.com/murage_kibicho) \
+[Join Reddit Community](https://www.reddit.com/r/PivotJS/)

@@ -1,6 +1,6 @@
 {
   "name": "create-new-startup",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Starter code for quickly building startups with Pivot.js",
   "main": "./frontend/index.js",
   "bin": {

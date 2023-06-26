@@ -1,3 +1,6 @@
+[Follow on Twitter](https://twitter.com/murage_kibicho) \
+[Join Reddit Community](https://www.reddit.com/r/PivotJS/) \
+
 A React framework for startup founders to <ins>test ideas super fast</ins> while writing <ins>reusable code for their next pivot.</ins>  
 # Get Started Immediately
 ```
@@ -100,3 +103,5 @@ Every page shares a folder with its components, RTKQuery API calls and Redux sta
 Murage Kibicho \
 Branford College \
 New Haven, Connecticut \ 
+[Follow on Twitter](https://twitter.com/murage_kibicho) \
+[Join Reddit Community](https://www.reddit.com/r/PivotJS/)

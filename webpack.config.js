@@ -7,10 +7,13 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'index_bundle.js',
+    publicPath: '/'
   },
   target: 'web',
+  devtool: 'source-map',
   devServer: {
     port: '5000',
+    historyApiFallback: true,
     static: {
       directory: path.join(__dirname, 'public'),
     },
@@ -28,6 +31,9 @@ module.exports = {
         exclude: /node_modules/,
         use: 'babel-loader',
       },
+      {
+        
+      }
     ],
   },
   plugins: [

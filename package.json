@@ -59,10 +59,16 @@
     "react-router-dom": "^6.11.2",
     "redux": "^4.2.1",
     "styled-components": "^6.0.0-rc.3",
+    "ua-parser-js": "^1.0.35",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.0",
-    "ua-parser-js": "^1.0.35"
+    "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
+    "style-loader": "^3.3.3",
+    "svg-url-loader": "^8.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    
+  }
 }

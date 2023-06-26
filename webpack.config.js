@@ -26,14 +26,25 @@ module.exports = {
   },
   module: {
     rules: [
-      {
+      { //Open .js and .jsx files
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: 'babel-loader',
       },
-      {
-        
-      }
+      { //Open .md files for react-markdown
+        test: /\.md$/,
+        use: 'file-loader'
+      },
+      { //Open .svg files
+        test: /\.svg$/,
+        loader: 'svg-url-loader',
+        options: { limit: 10000,},
+
+      },
+      { //Open .css files
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
   plugins: [

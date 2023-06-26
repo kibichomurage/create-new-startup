@@ -13,13 +13,8 @@ npx create-new-startup PivotJs
 * You've learnt that **adding more** features **won't bring in** users. <ins>Talking to customers</ins> and <ins>analytics</ins> guide you.
 * You're an indie-hacker who can learn/knows Express, React and Redux.
 
-##### Table of Contents  
-[Framework Features](#features)  
-[Style Guide](#styles) \
-[Redux Cheatsheet](#cheatsheet)
-
-
 <a name="features"/>
+
 ## Framework Features
 *	#### Frontend 
     * Redux State Management with custom code completion in VScode
@@ -34,15 +29,14 @@ npx create-new-startup PivotJs
     * Server-side rendering
 
 <a name="styles"/>
+
 ## Style Guide
 #### Disclaimer:  
 You **MUST** follow a design pattern to make your code reusable. Don't worry about OOP or functional programming. This guide defines a **Directory Structure** for reusable components
 
 <a name="cheatsheet"/>
+
 ## Redux Cheatsheet
-   
-
-
 
 ## Milestones
 1. Test on Windows and Mac

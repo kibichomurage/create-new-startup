@@ -1,6 +1,7 @@
 [Follow on Twitter](https://twitter.com/murage_kibicho) \
 [Join Reddit Community](https://www.reddit.com/r/PivotJS/) 
 
+
 A React framework for startup founders to <ins>test ideas super fast</ins> while writing <ins>reusable code for their next pivot.</ins>  
 # Get Started Immediately
 ```

@@ -109,7 +109,7 @@
           "\tconst currentTime = Date.now();",
           "\tconst pageDetails = {'path':location.pathname, 'time': currentTime};",
           "\nreturn(",
-          "\t<Container>New Pivot</Container>",
+          "\t<Container>${1:${TM_FILENAME_BASE}} Pivot</Container>",
           ")",
           "}\n\n\n",
           "export default ${1:${TM_FILENAME_BASE}}"

@@ -7,8 +7,7 @@ const App = () => {
   return(
     <Router>
       <Routes>
-        <Route path="/" element = {<Analytics/>} >
-        </Route>
+        <Route path="/" element = {<Analytics/>} />
       </Routes>
   </Router>
   )

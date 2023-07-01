@@ -38,7 +38,7 @@
             "\tif(state.${1:var}  === true){state.${1:var} = false}",
             "\telse{state.${1:var} = true}",
             "}",
-            "//${1:var} fexport",
+            "//Export ${1:var} current state",
             "export const select${1:var}State  = (state) => state.${TM_FILENAME_BASE}.${1:var};"
           
         ],

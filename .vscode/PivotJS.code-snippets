@@ -29,17 +29,17 @@
         "prefix": "pvtBool",
         "body": 
         [
-            "//Copy and Paste inside Initial state",
-            "${1} : false,",
+            "//${1:var} Initial state",
+            "${1:var}  : false,",
             " ",
-            "//Copy and Paste inside Reducer",
-            "toggle${1}State : (state) =>",
+            "//${1:var}  Reducer",
+            "toggle${1:var}State : (state) =>",
             "{",
-            "\tif(state.${1} === true){state.${1} = false}",
-            "\telse{state.${1} = true}",
+            "\tif(state.${1:var}  === true){state.${1:var} = false}",
+            "\telse{state.${1:var} = true}",
             "}",
-            "//Copy and Paste export",
-            "export const select${1}State  = (state) => state.${TM_FILENAME_BASE}.${1};"
+            "//${1:var} fexport",
+            "export const select${1:var}State  = (state) => state.${TM_FILENAME_BASE}.${1:var};"
           
         ],
         "description": "Redux Boolean"

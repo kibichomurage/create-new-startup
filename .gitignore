@@ -53,6 +53,8 @@ typings/
 # Optional npm cache directory
 .npm
 
+# Keys
+keys.txt
 # Optional eslint cache
 .eslintcache
 

@@ -1,8 +1,13 @@
 {
   "name": "pivotjs-officialextension",
-  "displayName": "PivotJS-OfficialExtension",
-  "description": "Official Extemsion pack for the Pivot JS framework",
-  "version": "0.0.1",
+  "displayName": "PivotJS-Official",
+  "publisher": "MurageKibicho",
+  "author": 
+  {
+    "name": "Murage Kibicho"
+  },
+  "description": "Official Extension pack for the Pivot JS framework",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.79.0"
   },
@@ -54,6 +59,10 @@
     "typescript": "^5.1.3"
   },
   "dependencies": {
-    
-  }
+  },
+  "license": "MIT",
+  "bugs": {
+    "url":"https://github.com/kibichomurage/create-new-startup/issues"
+  },
+  "homepage": "https://github.com/kibichomurage/create-new-startup"
 }

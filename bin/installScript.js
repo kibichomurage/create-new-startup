@@ -86,18 +86,13 @@ console.log("Cleaning Extensions!");
 });
 
 //Delete KnownBugs.txt
-fs.unlink(__dirname+ '/KnownBugs.txt', function (err) 
+fs.unlink(__dirname+ '/KnownBugs.txt', function(error) 
 {            
-	if(error) {console.error(err);process.exit(-1);}                                                          
+	if(error) {console.error(error);process.exit(-1);}                                                          
 	console.log("Cleaned Known");                           
 });  
 
-//Delete KnownBugs.txt
-fs.unlink(__dirname+ '/KnownBugs.txt', function (err) 
-{            
-	if(error) {console.error(err);process.exit(-1);}                                                          
-	console.log("Cleaned Known");                           
-});  
+
 
 const newRepo = run(newRepoCommand);
 if(!newRepo){console.log("Git init failed"); process.exit(-1);}
@@ -132,6 +127,6 @@ else if(os.type() === 'Windows_NT')
 	if(!newRepo){console.log("Delete Known failed"); process.exit(-1);}
 
 }*/
-console.log(`Success!\n\n\n\tcd ${startupName} && run npm start\n`);
+console.log(`Success!\n\tcd ${startupName} && run npm start\n`);
 
 

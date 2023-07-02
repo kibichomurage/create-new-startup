@@ -5,7 +5,9 @@
 	// List of extensions which should be recommended for users of this workspace.
 	"recommendations": [
 		"dsznajder.es7-react-js-snippets",
-		"styled-components.vscode-styled-components"
+		"styled-components.vscode-styled-components",
+		"muragekibicho.pivotjs-officialextension"
+		
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": [

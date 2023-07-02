@@ -63,15 +63,45 @@ function getCurrentFilenames() {
 	});
 	console.log("\n");
   }
-  
-fs.rmdir("bin", () => {
-	console.log("Folder Deleted!");
-	
-	// Get the current filenames
-	// in the directory to verify
-	getCurrentFilenames();
-  });
+ 
+ //Delete bin
+fs.rmdir("bin", () => 
+{
+console.log("Cleaning Bin!");
+//getCurrentFilenames();
+});
 
+//Delete .git
+fs.rmdir(".git", () => 
+{
+console.log("Cleaning Git!");
+//getCurrentFilenames();
+});
+
+//Delete extensions
+fs.rmdir("extensions", () => 
+{
+console.log("Cleaning Extensions!");
+//getCurrentFilenames();
+});
+
+//Delete KnownBugs.txt
+fs.unlink(__dirname+ '/KnownBugs.txt', function (err) 
+{            
+	if(error) {console.error(err);process.exit(-1);}                                                          
+	console.log("Cleaned Known");                           
+});  
+
+//Delete KnownBugs.txt
+fs.unlink(__dirname+ '/KnownBugs.txt', function (err) 
+{            
+	if(error) {console.error(err);process.exit(-1);}                                                          
+	console.log("Cleaned Known");                           
+});  
+
+const newRepo = run(newRepoCommand);
+if(!newRepo){console.log("Git init failed"); process.exit(-1);}
+	
 /*if(os.type() === 'Linux')
 {
 	const deletedGit = run(deleteGitLinux);
@@ -102,6 +132,6 @@ else if(os.type() === 'Windows_NT')
 	if(!newRepo){console.log("Delete Known failed"); process.exit(-1);}
 
 }*/
-console.log(`Success!\ncd ${startupName} && npm start\n`);
+console.log(`Success!\n\n\n\tcd ${startupName} && run npm start\n`);
 
 

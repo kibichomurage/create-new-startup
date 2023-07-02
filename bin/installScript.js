@@ -56,43 +56,18 @@ if(!dependencies)
 
 console.log("cleaning up");
 
-function getCurrentFilenames() {
-	console.log("\nCurrent filenames:");
-	fs.readdirSync(__dirname).forEach(file => {
-	  console.log(file);
-	});
-	console.log("\n");
-  }
+try
+{
+	fs.rmSync("../extensions", {recursive : true});
+	fs.rmSync("../.git", {recursive : true});
+	fs.rmSync("../KnownBugs.txt", {recursive : true});
+	fs.rmSync("../bin", {recursive : true});
+}
+catch(error)
+{
+	console.log(error)
+}
  
- //Delete bin
-fs.rmdir("bin", () => 
-{
-console.log("Cleaning Bin!");
-//getCurrentFilenames();
-});
-
-//Delete .git
-fs.rmdir(".git", () => 
-{
-console.log("Cleaning Git!");
-//getCurrentFilenames();
-});
-
-//Delete extensions
-fs.rmdir("extensions", () => 
-{
-console.log("Cleaning Extensions!");
-//getCurrentFilenames();
-});
-
-//Delete KnownBugs.txt
-fs.unlink(__dirname+ '/KnownBugs.txt', function(error) 
-{            
-	if(error) {console.error(error);process.exit(-1);}                                                          
-	console.log("Cleaned Known");                           
-});  
-
-
 
 const newRepo = run(newRepoCommand);
 if(!newRepo){console.log("Git init failed"); process.exit(-1);}

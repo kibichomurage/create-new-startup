@@ -9,8 +9,6 @@ const path = require('path');
 
 function activate(context) {
 
-	console.log('Congratulations, your extension "pivotjs-officialextension" is now active!');
-
 	let createFolder = vscode.commands.registerCommand('pivotjs-officialextension.createFolder', async function () 
 	{
 		//Ensure folder already opened

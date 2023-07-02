@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 const {execSync} = require('child_process');
 const os = require('os');
+const fs = require('fs');
 
 
 if(process.argv.length < 3)
@@ -55,7 +56,23 @@ if(!dependencies)
 
 console.log("cleaning up");
 
-if(os.type() === 'Linux')
+function getCurrentFilenames() {
+	console.log("\nCurrent filenames:");
+	fs.readdirSync(__dirname).forEach(file => {
+	  console.log(file);
+	});
+	console.log("\n");
+  }
+  
+fs.rmdir("bin", () => {
+	console.log("Folder Deleted!");
+	
+	// Get the current filenames
+	// in the directory to verify
+	getCurrentFilenames();
+  });
+
+/*if(os.type() === 'Linux')
 {
 	const deletedGit = run(deleteGitLinux);
 	if(!deletedGit){console.log("Git delete failed"); process.exit(-1);}
@@ -84,7 +101,7 @@ else if(os.type() === 'Windows_NT')
 	const deleteBugsFile = run(deleteKnownBugsWindows);
 	if(!newRepo){console.log("Delete Known failed"); process.exit(-1);}
 
-}
+}*/
 console.log(`Success!\ncd ${startupName} && npm start\n`);
 
 

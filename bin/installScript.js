@@ -30,10 +30,12 @@ const prepareInstall = `cd ${startupName} && npm install `;
 
 const deleteGitLinux = `cd ${startupName} && rm -fr .git`;
 const deleteBinLinux = `cd ${startupName} && rm -fr bin`;
+const deleteExtensionsLinux = `cd ${startupName} && rm -fr extensions`;
 const deleteKnownBugsLinux = `cd ${startupName} && rm KnownBugs.txt`;
 
 const deleteGitWindows = `cd ${startupName} && rmdir /s /q .git`;
 const deleteBinWindows = `cd ${startupName} && rmdir /s /q bin`;
+const deleteExtensionsWindows = `cd ${startupName} && rmdir /s /q extensions`;
 const deleteKnownBugsWindows = `cd ${startupName} && del KnownBugs.txt`;
 
 const newRepoCommand = `cd ${startupName} && git init`;
@@ -63,6 +65,9 @@ if(os.type() === 'Linux')
 	const deletedBin = run(deleteBinLinux);
 	if(!deletedBin){console.log("Bin delete failed"); process.exit(-1);}
 	
+	const deletedExtensions = run(deleteExtensionsLinux);
+	if(!deletedExtensions){console.log("Extensions delete failed"); process.exit(-1);}
+	
 	const newRepo = run(newRepoCommand);
 	if(!newRepo){console.log("Git init failed"); process.exit(-1);}
 	
@@ -77,6 +82,9 @@ else if(os.type() === 'Windows_NT')
 	
 	const deletedBin = run(deleteBinWindows);
 	if(!deletedBin){console.log("Bin delete failed"); process.exit(-1);}
+	
+	const deletedExtensions = run(deleteExtensionsWindows);
+	if(!deletedExtensions){console.log("Extensions delete failed"); process.exit(-1);}
 	
 	const newRepo = run(newRepoCommand);
 	if(!newRepo){console.log("Git init failed"); process.exit(-1);}

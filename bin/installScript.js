@@ -1,7 +1,6 @@
 #! /usr/bin/env node
 const {execSync} = require('child_process');
 const os = require('os');
-const fs = require('fs');
 
 
 if(process.argv.length < 3)
@@ -54,37 +53,9 @@ if(!dependencies)
 	process.exit(-1);
 }
 
-console.log("cleaning up");
 
-
-
-const goThere = `cd ${startupName}`;
-try
-{
-	const goThereCom = run(goThere);
-	if(!goThereCom){console.log("Failed to go there"); process.exit(-1);}
 	
-	console.log(__dirname);
-	console.log("New path");
-	var path = __dirname.split("/");
-	var strippedPath = path.slice(0, path.length-1).join("/");
-	console.log(strippedPath);
-
-	fs.rmSync("extensions", {recursive : true});
-	fs.rmSync(".git", {recursive : true});
-	fs.rmSync("KnownBugs.txt", {recursive : true});
-	fs.rmSync("bin", {recursive : true});
-}
-catch(error)
-{
-	console.log(error)
-}
- 
-
-const newRepo = run(newRepoCommand);
-if(!newRepo){console.log("Git init failed"); process.exit(-1);}
-	
-/*if(os.type() === 'Linux')
+if(os.type() === 'Linux')
 {
 	const deletedGit = run(deleteGitLinux);
 	if(!deletedGit){console.log("Git delete failed"); process.exit(-1);}
@@ -113,7 +84,7 @@ else if(os.type() === 'Windows_NT')
 	const deleteBugsFile = run(deleteKnownBugsWindows);
 	if(!newRepo){console.log("Delete Known failed"); process.exit(-1);}
 
-}*/
+}
 console.log(`Success!\n\tcd ${startupName} && run npm start\n`);
 
 

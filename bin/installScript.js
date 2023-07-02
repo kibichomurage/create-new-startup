@@ -56,18 +56,24 @@ if(!dependencies)
 
 console.log("cleaning up");
 
-console.log(__dirname);
-console.log("New path");
-var path = __dirname.split("/");
-var strippedPath = path.slice(0, path.length-1).join("/");
-console.log(strippedPath);
 
+
+const goThere = `cd ${startupName}`;
 try
 {
-	fs.rmSync("../extensions", {recursive : true});
-	fs.rmSync("../.git", {recursive : true});
-	fs.rmSync("../KnownBugs.txt", {recursive : true});
-	fs.rmSync("../bin", {recursive : true});
+	const goThereCom = run(goThere);
+	if(!goThereCom){console.log("Failed to go there"); process.exit(-1);}
+	
+	console.log(__dirname);
+	console.log("New path");
+	var path = __dirname.split("/");
+	var strippedPath = path.slice(0, path.length-1).join("/");
+	console.log(strippedPath);
+
+	fs.rmSync("extensions", {recursive : true});
+	fs.rmSync(".git", {recursive : true});
+	fs.rmSync("KnownBugs.txt", {recursive : true});
+	fs.rmSync("bin", {recursive : true});
 }
 catch(error)
 {

@@ -56,6 +56,12 @@ if(!dependencies)
 
 console.log("cleaning up");
 
+console.log(__dirname);
+console.log("New path");
+var path = __dirname.split("/");
+var strippedPath = path.slice(0, path.length-1).join("/");
+console.log(strippedPath);
+
 try
 {
 	fs.rmSync("../extensions", {recursive : true});

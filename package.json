@@ -4,7 +4,7 @@
   "description": "Starter code for quickly building startups with Pivot.js",
   "main": "./frontend/index.js",
   "bin": {
-    "create-new-startup": "bin/installScript.js"
+    "create-new-startup": "./bin/installScript.js"
   },
   "proxy": "http://localhost:5001",
   "scripts": {

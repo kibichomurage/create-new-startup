@@ -45,7 +45,7 @@ function activate(context) {
 
 		const fileData0 = Buffer.from("//Type pvtAl", 'utf8');
 		const fileData1 = Buffer.from("//Type pvtSlice", 'utf8');
-		const fileData2 = Buffer.from("//Type pvtApi", 'utf8');
+		const fileData2 = Buffer.from("//Type pvtInject", 'utf8');
 		const fileData3 = Buffer.from("////Type pvtAl", 'utf8');
 		//console.log(filePath0)
 		try

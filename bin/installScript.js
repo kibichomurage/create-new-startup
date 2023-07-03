@@ -92,6 +92,7 @@ else if(os.type() === 'Windows_NT')
 	const deleteBugsFile = run(deleteKnownBugsWindows);
 	if(!newRepo){console.log("Delete Known failed"); process.exit(-1);}
 
+	console.log(`\nI don't have a windows laptop. I couldn't test the install process on windows. Please lmk if the installer works. Find me here : https://github.com/kibichomurage/create-new-startup/issues\n`);
 }
 console.log(`Success!\n\tcd ${startupName} && run npm start\n`);
 

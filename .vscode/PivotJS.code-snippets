@@ -85,7 +85,7 @@
             "{",
             "\tstate.${1:var} = action.payload",            
             "}",
-            "//${1:var} export",
+            "//Export ${1:var} current state",
             "export const select${1:var}State  = (state) => state.${TM_FILENAME_BASE}.${1:var};"
         ],
         "description": "Redux List"

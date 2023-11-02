@@ -1,6 +1,6 @@
 {
   "name": "create-new-startup",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "A React Framework for Startup Founders",
   "main": "./frontend/index.js",
   "bin": {
